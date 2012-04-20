@@ -5,7 +5,7 @@ from api.handlers import MeetingHandler
 meeting_handler = Resource(MeetingHandler)
 
 urlpatterns = patterns('', 
-    url(r'^meeting/(?P<meeting_id>[^/]+)/', meeting_handler),
+    url(r'^meetings\.(?P<emitter_format>.+)', meeting_handler),
     )
 
 
